@@ -17,11 +17,76 @@ function sendMessage(text) {
   input.value = '';
   input.style.height = 'auto';
   
+
 window.setTimeout(() => {
-    const replies = [
-        "Hey bru! 💜 I'm Six AI. I'm still in prototype mode, but we're building something special. What are you working on?",
-        "I'm with you! 🚀 Tell me a little more about what you need, and we'll work through it step by step.",
-        "Let's figure it out together. I'll keep things clear, practical, and detailed enough to help."
+    const message = clean.toLowerCase();
+    let reply;
+
+    if (/\b(hi|hey|hello|howzit|sup)\b/.test(message)) {
+        reply = "Yoh! 😎 What's good? Tell me what's happening.";
+    } else if (message.includes("how are you")) {
+        reply = "I'm running smooth, bru! 💜 How's your day going?";
+    } else if (message.includes("your name") || message.includes("who are you")) {
+        reply = "I'm Six AI, your digital sidekick. What can we tackle today?";
+    } else if (message.includes("rap") || message.includes("lyrics") || message.includes("song")) {
+        reply = "🔥 Let's cook up some bars! What's the vibe: drill, trap, emotional, or straight street energy?";
+    } else if (message.includes("help")) {
+        reply = "I've got you. Tell me what you're trying to do, and we'll break it down step by step.";
+    } else if (message.includes("thank")) {
+        reply = "Anytime, bru! 💜 What else can we work on?";
+    } else {
+        reply = "I'm listening, bru. Tell me a little more so I can help you properly.";
+    }
+
+    addMessage(reply, 'assistant');
+}, 350);
+
+window.setTimeout(() => {
+    const message = clean.toLowerCase();
+    let reply;
+
+    if (/\b(hi|hey|hello|howzit|sup)\b/.test(message)) {
+        reply = "Yoh! 😎 What's good? Tell me what's happening.";
+    } else if (message.includes("how are you")) {
+        reply = "I'm running smooth, bru! 💜 How's your day going?";
+    } else if (message.includes("your name") || message.includes("who are you")) {
+        reply = "I'm Six AI, your digital sidekick. What can we tackle today?";
+    } else if (message.includes("rap") || message.includes("lyrics") || message.includes("song")) {
+        reply = "🔥 Let's cook up some bars! What's the vibe: drill, trap, emotional, or straight street energy?";
+    } else if (message.includes("help")) {
+        reply = "I've got you. Tell me what you're trying to do, and we'll break it down step by step.";
+    } else if (message.includes("thank")) {
+        reply = "Anytime, bru! 💜 What else can we work on?";
+    } else {
+        reply = "I'm listening, bru. Tell me a little more so I can help you properly.";
+    }
+
+    addMessage(reply, 'assistant');
+}, 350);
+
+window.setTimeout(() => {
+    const message = clean.toLowerCase();
+    let reply;
+
+    if (/\b(hi|hey|hello|howzit|sup)\b/.test(message)) {
+        reply = "Yoh! 😎 What's good? Tell me what's happening.";
+    } else if (message.includes("how are you")) {
+        reply = "I'm running smooth, bru! 💜 How's your day going?";
+    } else if (message.includes("your name") || message.includes("who are you")) {
+        reply = "I'm Six AI, your digital sidekick. What can we tackle today?";
+    } else if (message.includes("rap") || message.includes("lyrics") || message.includes("song")) {
+        reply = "🔥 Let's cook up some bars! What's the vibe: drill, trap, emotional, or straight street energy?";
+    } else if (message.includes("help")) {
+        reply = "I've got you. Tell me what you're trying to do, and we'll break it down step by step.";
+    } else if (message.includes("thank")) {
+        reply = "Anytime, bru! 💜 What else can we work on?";
+    } else {
+        reply = "I'm listening, bru. Tell me a little more so I can help you properly.";
+    }
+
+    addMessage(reply, 'assistant');
+}, 350);
+
     ];
 
     const reply = replies[Math.floor(Math.random() * replies.length)];
