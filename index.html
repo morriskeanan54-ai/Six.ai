@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111b">
+  <meta name="description" content="Six AI — a personal AI assistant built for natural conversation, useful memory, and reliable answers.">
+  <title>Six AI | Your assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">6</div><div><strong>Six AI</strong><span>YOUR AI, YOUR WAY</span></div></div>
+      <button class="new-chat" id="newChat">＋ New chat</button>
+      <div class="side-label">YOUR SPACE</div>
+      <button class="nav-item active" data-view="chat">◉ <span>Chat</span></button>
+      <button class="nav-item" data-view="memory">✧ <span>Memory</span></button>
+      <button class="nav-item" data-view="settings">⚙ <span>Settings</span></button>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Prototype mode <small>AI connection not set up</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Toggle menu">☰</button>
+        <div class="top-title">Six AI <span class="online-pill"><i></i> Prototype</span></div>
+        <button class="avatar" title="Six AI">6</button>
+      </header>
+      <section class="view active" id="chatView">
+        <div class="welcome">
+          <div class="orb"><span>6</span></div>
+          <p class="eyebrow">A NEW KIND OF ASSISTANT</p>
+          <h1>What's on your mind?</h1>
+          <p class="subhead">Natural conversation. Useful memory. Honest answers.</p>
+          <div class="notice"><strong>First build:</strong> This is the interface prototype. It doesn't connect to a live AI yet, so don't enter private information.</div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+        <div class="composer-wrap">
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Help me plan a project">✦ Plan a project</button>
+            <button class="suggestion" data-prompt="Explain something simply">↗ Explain something</button>
+            <button class="suggestion" data-prompt="Help me solve a problem step by step">◎ Solve a problem</button>
+          </div>
+          <form class="composer" id="chatForm">
+            <textarea id="messageInput" rows="1" placeholder="Message Six..." aria-label="Message Six"></textarea>
+            <button class="send-button" type="submit" aria-label="Send message">↑</button>
+          </form>
+          <p class="fine-print">Six can make mistakes. Check important information.</p>
+        </div>
+      </section>
+      <section class="view content-view" id="memoryView">
+        <p class="eyebrow">YOUR SPACE</p><h1>Memory</h1>
+        <p class="subhead">The goal is for Six to remember useful context without pretending to remember what it doesn't.</p>
+        <div class="panel"><div class="panel-icon">✧</div><div><h3>Memory controls are coming</h3><p>Later, you'll be able to review, edit, and delete saved memories. This prototype doesn't save long-term memories yet.</p></div></div>
+      </section>
+      <section class="view content-view" id="settingsView">
+        <p class="eyebrow">MAKE IT YOURS</p><h1>Settings</h1>
+        <div class="setting-row"><div><h3>Personality</h3><p>Natural, adaptive, and direct when needed.</p></div><span class="tag">Planned</span></div>
+        <div class="setting-row"><div><h3>Web search</h3><p>Search current information and check sources.</p></div><span class="tag">Planned</span></div>
+        <div class="setting-row"><div><h3>Privacy</h3><p>Memory controls and secure handling of account data.</p></div><span class="tag">Planned</span></div>
+        <div class="setting-row"><div><h3>AI connection</h3><p>We'll connect an AI model through a secure backend, never expose secret keys in browser code.</p></div><span class="tag">Not connected</span></div>
+      </section>
+      <footer class="footer">Built step by step with care <span>✦</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
