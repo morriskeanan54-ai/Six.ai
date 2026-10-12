@@ -16,9 +16,19 @@ function sendMessage(text) {
   addMessage(clean, 'user');
   input.value = '';
   input.style.height = 'auto';
-  window.setTimeout(() => {
-    addMessage("I'm the first Six AI prototype. My chat screen is working, but I'm not connected to an AI model yet. The next build will add a secure AI connection, conversation history, and web search.", 'assistant');
-  }, 350);
+  
+window.setTimeout(() => {
+    const replies = [
+        "Hey bru! 💜 I'm Six AI. I'm still in prototype mode, but we're building something special. What are you working on?",
+        "I'm with you! 🚀 Tell me a little more about what you need, and we'll work through it step by step.",
+        "Let's figure it out together. I'll keep things clear, practical, and detailed enough to help."
+    ];
+
+    const reply = replies[Math.floor(Math.random() * replies.length)];
+    addMessage(reply, 'assistant');
+}, 350);
+
+  
 }
 form.addEventListener('submit', event => {
   event.preventDefault();
